@@ -1,0 +1,187 @@
+/*
+List of all elements:
+MAIN
+	.full
+		.ssnavleft 
+		.ssnavright 
+	.left
+	.right
+MENU 
+	.menu
+	.menu-top
+	.menu-bottom 
+	.logo
+	.btnbig
+	.btnsmall
+*/
+
+body {
+	background-color: black;
+}
+
+/*fonts*/
+.full, .ssnavleft, .ssnavright, .left, .right, .menu, .menu-top, .menu-bottom {
+	color: white;
+	font-family: 'Malgun Gothic';
+	font-size: 100%;
+}
+h1 {
+	font-size: 120%;
+}
+h2 {
+	font-size: 100%;
+	text-decoration: underline;
+}
+/*main elements*/
+.full {
+	width: 100%;
+	top: 0%;
+	bottom: 10%;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+}
+	.full img {
+		max-height: 100%;
+		max-width: 100%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+.left, .right, .ssnavleft, .ssnavright {
+	width: 50%;
+	bottom: 10%;
+	top: 0%;
+}
+.left, .right {
+	position:fixed;
+	background-color: black;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.left {
+	float: left;
+	left: 0px;
+	z-index: 0;
+}
+.right {
+	float: right;
+	right: 0px;
+	z-index: 3;
+}
+	.left img {
+		height: 100%;
+		z-index: 2;
+		display: block;
+		float: right;
+	}
+	.right img {
+		height: 100%;
+		z-index: 4;
+		display: block;
+	}
+	.left p {
+		z-index: 3;
+	}
+	.right p {
+		z-index: 5;
+	}
+.left p, .right p, .full p {
+	padding: 1%;
+}
+.ssnavleft, .ssnavright {
+	background-color: rgba(255,255,255,0);
+	border: none;
+	color: rgba(255,255,255,0);
+	position: fixed;
+}
+.ssnavleft:focus, .ssnavright:focus {
+	outline: none;
+}
+.ssnavleft:hover, .ssnavright:hover {
+	background-color: rgba(255,255,255,0.1);
+	color: rgba(255,255,255,1);
+}
+
+.ssnavleft { 
+	float: left;
+	left: 0px;
+}
+.ssnavright {
+	float: right;
+	right: 0px;
+}
+	
+/*menu elements*/
+.menu {
+	left: 0px;
+	right: 0px;
+	height: 10%;
+	width: 100%;
+	bottom: 0px;
+	position: fixed;
+	z-index: 9999;
+	background-color: black;
+}
+.menu-top, .menu-bottom {
+	left: 22%;
+	right: 0px;
+	height: 5%;
+	position: fixed;
+}
+.menu-top {
+	bottom: 5%;
+}
+.menu-bottom {
+	bottom: 0px;
+}
+.logo, .btnbig, .btnsmall {
+	background-color: black;
+	display: inline-block;
+	border: none;
+	outline: none;
+	height: 100%;
+	float: left;
+}
+.logo {
+	width: 22%;
+}
+.btnbig {
+	width: 30%;
+}
+.btnsmall {
+	width: 20%;
+}
+	.logo img, .btnbig img, .btnsmall img {
+		height: 100%;
+		max-width: 100%;
+		position: center;
+	}
+
+/* menu element interactions */
+.logo:active, .btnbig:active, .btnsmall:active, .logo:hover, .btnbig:hover, .btnsmall:hover, .logo:focus, .btnbig:focus, .btnsmall:focus {
+	background-color: rgba(150,210,150,0.5);
+	color: white;
+	cursor: pointer;
+}
+
+/* text hyperlinks */
+a:link, a:visited, a:active {
+    color: rgba(150,255,150,1);
+	text-decoration: underline;
+}
+
+/* scrollbar */
+.left::-webkit-scrollbar, .right::-webkit-scrollbar { 
+	width: 5px;
+	z-index: 6;
+}
+.left::-webkit-scrollbar-thumb, .right::-webkit-scrollbar-thumb { 
+	width: 5px;
+	background-color: rgba(150,210,150,0);
+}
+.left:hover::-webkit-scrollbar-thumb, .right:hover::-webkit-scrollbar-thumb {
+	width: 5px;
+	background-color: rgba(150,210,150,0.5);
+}
