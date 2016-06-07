@@ -87,8 +87,9 @@ h2 {
 	.right p {
 		z-index: 5;
 	}
-.left p, .right p, .full p {
-	padding: 1%;
+.left p, .right p, .full p, h1, h2 {
+	padding-left: 2%;
+	padding-right: 2%;
 }
 .ssnavleft, .ssnavright {
 	background-color: rgba(255,255,255,0);
