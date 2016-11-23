@@ -113,6 +113,10 @@ h2 {
 	float: right;
 	right: 0px;
 }
+iframe {
+    display:block;
+    width:100%;
+}
 	
 /*menu elements*/
 .menu {
